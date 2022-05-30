@@ -27,12 +27,14 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
-  "author": "",
-  "homepage": "",
+  "author": "onesebun",
+  "homepage": "https://github.com/onesebun/rocket-chat-widget",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/onesebun/rocket-chat-widget",
   "keywords": [
-    "react-component"
+    "react-component",
+    "rocket-chat",
+    "iframe"
   ],
   "dependencies": {
     "@emotion/react": "^11.9.0",
