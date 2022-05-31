@@ -1,6 +1,6 @@
 {
   "name": "rocket-chat-widget",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "rocket-chat-widget React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -34,7 +34,8 @@
   "keywords": [
     "react-component",
     "rocket-chat",
-    "iframe"
+    "iframe",
+    "chat"
   ],
   "dependencies": {
     "@emotion/react": "^11.9.0",

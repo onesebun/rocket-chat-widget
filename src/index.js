@@ -10,7 +10,18 @@ import Badge from '@mui/material/Badge';
 
 import Draggable from 'react-draggable';
 
-function RocketChatWidget({ iframeSrc, anchor, tooltip, closeText, rootStyle }) {
+function RocketChatWidget({
+  iframeSrc,
+  iframeTitle,
+  anchor,
+  tooltip,
+  closeText,
+  rootStyle,
+  drawerWidth,
+  draggable,
+  icon,
+  ...rest
+}) {
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -57,11 +68,13 @@ function RocketChatWidget({ iframeSrc, anchor, tooltip, closeText, rootStyle }) 
     setState({ ...state, [anchor]: open });
   };
 
+  const isAnchorTopOrBottom = anchor === 'top' || anchor === 'bottom'
+
   const list = (anchor) => (
     <Box
       sx={{
-        width: anchor === 'top' || anchor === 'bottom' ? 'auto' : '100vw',
-        maxWidth: anchor === 'top' || anchor === 'bottom' ? 'auto' : 550,
+        width: isAnchorTopOrBottom ? 'auto' : '100vw',
+        maxWidth: isAnchorTopOrBottom ? 'auto' : drawerWidth,
         height: '100vh',
         display: 'flex',
         flexDirection: 'column'
@@ -73,18 +86,18 @@ function RocketChatWidget({ iframeSrc, anchor, tooltip, closeText, rootStyle }) 
       <iframe
         src={iframeSrc}
         style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
-        title="Rocket.chat"
+        title={iframeTitle}
       />
       <Button>{closeText}</Button>
     </Box>
   );
 
   return (
-    <div style={rootStyle}>
+    <div style={rootStyle} {...rest}>
       <React.Fragment key={anchor}>
         <Draggable
+          disabled={!draggable}
           axis="both"
-          onClick={e => console.log(e)}
           onStart={() => setIsDragging(false)}
           onDrag={() => setIsDragging(true)}
           onStop={() => setIsDragging(false)}
@@ -100,7 +113,7 @@ function RocketChatWidget({ iframeSrc, anchor, tooltip, closeText, rootStyle }) 
               aria-expanded={open ? 'true' : undefined}
             >
               <Badge color="secondary" badgeContent={count}>
-                <ChatIcon />
+                {icon || <ChatIcon />}
               </Badge>
             </IconButton>
           </Tooltip>
@@ -124,17 +137,25 @@ function RocketChatWidget({ iframeSrc, anchor, tooltip, closeText, rootStyle }) 
 
 RocketChatWidget.propTypes = {
   iframeSrc: PropTypes.string.isRequired,
+  iframeTitle: PropTypes.string,
   rootStyle: PropTypes.object,
   anchor: PropTypes.string,
   tooltip: PropTypes.string,
-  closeText: PropTypes.string
+  drawerWidth: PropTypes.number,
+  closeText: PropTypes.string,
+  draggable: PropTypes.bool,
+  icon: PropTypes.node.isRequired
 }
 
 RocketChatWidget.defaultProps = {
+  iframeTitle: 'Rocket.chat',
   anchor: 'right',
   tooltip: 'Chat',
   closeText: 'Close',
-  rootStyle: { right: 10, bottom: 10, position: 'absolute' }
+  rootStyle: { right: 10, bottom: 10, position: 'absolute' },
+  drawerWidth: 500,
+  draggable: false,
+  icon: <ChatIcon />
 };
 
 export default RocketChatWidget;

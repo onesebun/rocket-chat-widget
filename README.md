@@ -1,8 +1,19 @@
 # rocket-chat-widget
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+<!-- [![Travis][build-badge]][build] -->
+<!-- [![npm package][npm-badge]][npm] -->
+<!-- [![Coveralls][coveralls-badge]][coveralls] -->
+[![version](https://img.shields.io/npm/v/rocket-chat-widget.svg)]()
+[![npm downloads](https://img.shields.io/npm/dt/rocket-chat-widget.svg?maxAge=2592000)](http://npmjs.com/package/rocket-chat-widget)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
+## Demo
+
+![螢幕錄製 2022-05-31 20 30 30](https://user-images.githubusercontent.com/23612161/171174490-3357d009-6d75-4cbe-a8d8-cfc4985ec6d3.gif)
+
+## rocket.chat iframe integration
+
+https://developer.rocket.chat/rocket.chat/iframe-integration/adding-a-rocket.chat-chat-room-to-your-web-app
 
 ## Installation
 
@@ -30,15 +41,16 @@ function App() {
 }
 ```
 
-## Demo
+## Props
 
-https://user-images.githubusercontent.com/23612161/171030050-58fec1b3-9c18-45f7-9a86-c4ebf24fd4d5.mov
-
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+| name        | type      | default                                         | description                    |
+|-------------|-----------|-------------------------------------------------|--------------------------------|
+| iframeSrc   | String    |                                                 | 您的 rocket.chat 網址            |
+| iframeTitle | String    | Rocket.chat                                     | iframe title 名稱               |
+| anchor      | String    | right                                           | 抽屜方向（top|right|bottom|left）|
+| tooltip     | String    | Chat                                            | tooltip 名稱                    |
+| closeText   | String    | Close                                           | 抽屜關閉名稱                     |
+| rootStyle   | Object    | { right: 10, bottom: 10, position: 'absolute' } | root 樣式                       |
+| draggable   | String    | false                                           | 是否可拖移                       |
+| drawerWidth | Number    | 500                                             | 抽屜寬度                         |
+| icon        | ReactNode | ChatIcon                                        | icon                           |
