@@ -47,7 +47,7 @@ function App() {
 |-------------|-----------|-------------------------------------------------|--------------------------------|
 | iframeSrc   | String    |                                                 | 您的 rocket.chat 網址            |
 | iframeTitle | String    | Rocket.chat                                     | iframe title 名稱               |
-| anchor      | String    | right                                           | 抽屜方向（top|right|bottom|left）|
+| anchor      | String    | right                                           | 抽屜方向（top,right,bottom,left）|
 | tooltip     | String    | Chat                                            | tooltip 名稱                    |
 | closeText   | String    | Close                                           | 抽屜關閉名稱                     |
 | rootStyle   | Object    | { right: 10, bottom: 10, position: 'absolute' } | root 樣式                       |
