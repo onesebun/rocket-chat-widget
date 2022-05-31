@@ -9,7 +9,7 @@
 
 ## Demo
 
-![螢幕錄製 2022-05-31 20 30 30](https://user-images.githubusercontent.com/23612161/171174490-3357d009-6d75-4cbe-a8d8-cfc4985ec6d3.gif)
+![2022-05-31 20 30 30](https://user-images.githubusercontent.com/23612161/171181234-e75cc251-5cd6-4a72-b106-118013b8de81.gif)
 
 ## rocket.chat iframe integration
 

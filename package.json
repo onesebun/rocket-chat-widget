@@ -1,6 +1,6 @@
 {
   "name": "rocket-chat-widget",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "rocket-chat-widget React component",
   "main": "lib/index.js",
   "module": "es/index.js",
