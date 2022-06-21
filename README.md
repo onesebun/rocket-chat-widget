@@ -50,7 +50,7 @@ function App() {
 | anchor      | String    | right                                           | 抽屜方向（top,right,bottom,left）|
 | tooltip     | String    | Chat                                            | tooltip 名稱                    |
 | closeText   | String    | Close                                           | 抽屜關閉名稱                     |
-| rootStyle   | Object    | { right: 10, bottom: 10, position: 'absolute' } | root 樣式                       |
+| rootStyle   | Object    | { right: 10, bottom: 10, position: 'fixed' } | root 樣式                       |
 | draggable   | Boolean   | false                                           | 是否可拖移                       |
 | drawerWidth | Number    | 500                                             | 抽屜寬度                         |
 | icon        | ReactNode | ChatIcon                                        | icon                           |

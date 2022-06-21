@@ -152,7 +152,7 @@ RocketChatWidget.defaultProps = {
   anchor: 'right',
   tooltip: 'Chat',
   closeText: 'Close',
-  rootStyle: { right: 10, bottom: 10, position: 'absolute' },
+  rootStyle: { right: 10, bottom: 10, position: 'fixed' },
   drawerWidth: 500,
   draggable: false,
   icon: <ChatIcon />
