@@ -7,6 +7,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Badge from '@mui/material/Badge';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 import Draggable from 'react-draggable';
 
@@ -88,7 +89,17 @@ function RocketChatWidget({
         style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
         title={iframeTitle}
       />
-      <Button>{closeText}</Button>
+      <div style={{ display: 'flex' }}>
+        <Button style={{ flex: 1 }}>{closeText}</Button>
+        <IconButton
+          color="primary"
+          aria-label="launch"
+          target="_blank"
+          href={iframeSrc}
+        >
+          <LaunchIcon />
+        </IconButton>
+      </div>
     </Box>
   );
 
